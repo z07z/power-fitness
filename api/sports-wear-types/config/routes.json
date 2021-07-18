@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sports-wear-types",
+      "handler": "sports-wear-types.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sports-wear-types/count",
+      "handler": "sports-wear-types.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sports-wear-types/:id",
+      "handler": "sports-wear-types.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sports-wear-types",
+      "handler": "sports-wear-types.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sports-wear-types/:id",
+      "handler": "sports-wear-types.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sports-wear-types/:id",
+      "handler": "sports-wear-types.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

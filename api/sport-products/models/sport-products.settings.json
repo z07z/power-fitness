@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sport_products",
+  "info": {
+    "name": "Sport Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "model": "category"
+    },
+    "ImageURL": {
+      "type": "string"
+    },
+    "sub_category": {
+      "model": "sub-category"
+    },
+    "sports_wear_type": {
+      "model": "sports-wear-types"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Red",
+        "Blue",
+        "Green"
+      ]
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    }
+  }
+}

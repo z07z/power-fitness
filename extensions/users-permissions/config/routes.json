@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/verify",
+      "handler": "User.verifyAccount",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/userCommunities/:id",
+      "handler": "User.userCommunities",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

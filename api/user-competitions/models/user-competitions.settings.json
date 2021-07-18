@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_competitions",
+  "info": {
+    "name": "User Competitions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "competition": {
+      "model": "competitions"
+    },
+    "Value": {
+      "type": "integer"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/goal-s-plans",
+      "handler": "goal-s-plans.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/goal-s-plans/count",
+      "handler": "goal-s-plans.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/goal-s-plans/:id",
+      "handler": "goal-s-plans.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/goal-s-plans",
+      "handler": "goal-s-plans.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/goal-s-plans/:id",
+      "handler": "goal-s-plans.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/goal-s-plans/:id",
+      "handler": "goal-s-plans.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

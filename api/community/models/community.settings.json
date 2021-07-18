@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "communities",
+  "info": {
+    "name": "Community",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 250
+    },
+    "communityCode": {
+      "type": "uid"
+    },
+    "classes": {
+      "autoPopulate": false,
+      "via": "communities",
+      "collection": "class"
+    },
+    "clubs": {
+      "via": "community",
+      "collection": "club"
+    },
+    "users": {
+      "via": "user_communities",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "user_chats": {
+      "via": "community",
+      "collection": "user-chat"
+    },
+    "competitions": {
+      "via": "community",
+      "collection": "competitions"
+    },
+    "activities": {
+      "via": "community",
+      "collection": "activity"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

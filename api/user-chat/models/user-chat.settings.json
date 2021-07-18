@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_chats",
+  "info": {
+    "name": "user chat",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "from": {
+      "via": "user_chats_1",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "to": {
+      "via": "user_chats",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "community": {
+      "via": "user_chats",
+      "model": "community"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Lost",
+        "Delivered",
+        "Read"
+      ]
+    },
+    "chatId": {
+      "type": "string"
+    }
+  }
+}

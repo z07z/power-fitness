@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "name": "class",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "communities": {
+      "via": "classes",
+      "collection": "community",
+      "dominant": true
+    },
+    "difficultyLevel": {
+      "type": "enumeration",
+      "enum": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "photo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "videoURL": {
+      "type": "string"
+    },
+    "requirement": {
+      "type": "json",
+      "required": false
+    },
+    "location": {
+      "type": "json",
+      "required": false
+    },
+    "users": {
+      "via": "user_classes",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

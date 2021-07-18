@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sport-products",
+      "handler": "sport-products.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sport-products/count",
+      "handler": "sport-products.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sport-products/:id",
+      "handler": "sport-products.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sport-products",
+      "handler": "sport-products.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sport-products/:id",
+      "handler": "sport-products.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sport-products/:id",
+      "handler": "sport-products.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

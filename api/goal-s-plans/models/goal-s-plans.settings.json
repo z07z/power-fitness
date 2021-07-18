@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "goal_s_plans",
+  "info": {
+    "name": "Goal plan",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "goal": {
+      "model": "goals",
+      "via": "goals_plans"
+    },
+    "ImageURL": {
+      "type": "string"
+    },
+    "Difficulty": {
+      "type": "string"
+    }
+  }
+}

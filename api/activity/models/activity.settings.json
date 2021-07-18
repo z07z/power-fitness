@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "name": "activity",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "sport",
+        "action",
+        "event"
+      ]
+    },
+    "community": {
+      "via": "activities",
+      "model": "community"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "photo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "date_time": {
+      "type": "datetime",
+      "required": true
+    },
+    "requirement": {
+      "type": "json",
+      "required": true
+    },
+    "users": {
+      "via": "user_activities",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
